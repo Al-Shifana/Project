@@ -139,6 +139,7 @@
     <Content Include="ViewCart.aspx" />
     <Content Include="ViewSingleProduct.aspx" />
     <Content Include="ViewAllProduct.aspx" />
+    <Content Include="View_Bill.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="AdminReg.aspx" />
@@ -222,6 +223,13 @@
     </Compile>
     <Compile Include="ViewAllProduct.aspx.designer.cs">
       <DependentUpon>ViewAllProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View_Bill.aspx.cs">
+      <DependentUpon>View_Bill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_Bill.aspx.designer.cs">
+      <DependentUpon>View_Bill.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

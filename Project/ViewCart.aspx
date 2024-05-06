@@ -59,7 +59,7 @@
                     </asp:GridView>
                 </td>
                 <td class="auto-style2">
-                    <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Visible="False"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -68,15 +68,17 @@
             </tr>
             <tr>
                 <td class="auto-style6">
-                    <asp:Label ID="Label2" runat="server" Text="Enter the quantity:" Visible="False"></asp:Label>
-                    <asp:TextBox ID="TextBox1" runat="server" Visible="False"></asp:TextBox>
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Button" />
+                    <asp:Panel ID="Panel1" runat="server" Visible="False">
+                        <asp:Label ID="Label2" runat="server" Text="Enter the quantity:"></asp:Label>
+                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Update" />
+                    </asp:Panel>
                 </td>
-                <td class="auto-style3"></td>
+                <td class="auto-style3">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style7"></td>
-                <td class="auto-style8"></td>
+                <td class="auto-style7">&nbsp;</td>
+                <td class="auto-style8">&nbsp;</td>
             </tr>
         </table>
         <div>

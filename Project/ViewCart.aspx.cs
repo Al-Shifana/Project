@@ -12,6 +12,14 @@ namespace Project
     public partial class View_Cart : System.Web.UI.Page
     {
         Class1 obj = new Class1();
+        int cid;
+        int cqu;
+        int cto;
+        string cst;
+        int pid;
+        int uid;
+        int gt = 0;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -46,6 +54,7 @@ namespace Project
         {
             int id1 = Convert.ToInt32(e.CommandArgument);
             Session["uid1"] = id1;
+            Panel1.Visible = true;
             Label2.Visible = true;
             TextBox1.Visible = true;
             string s = "select * from Cart_tab";
@@ -71,14 +80,49 @@ namespace Project
             string upd = "update Cart_tab set Quantity=" + TextBox1.Text + ",Total_Price  = " + t_price + "where Product_Id =" + Session["uid1"] + "";
             int u = obj.fn_NonQuery(upd);
             grid_bind();
+            
         }
 
         //confirm button
         protected void Button1_Click(object sender, EventArgs e)
         {
-           
+            string mx= "select max(Cart_Id)from Cart_tab";
+            string m = obj.fn_ExScalar(mx);
+            int max = Convert.ToInt32(m);
+            for(int i = 1; i <= max; i++)
+            {
+                string uids = "select * from Cart_tab where Cart_Id=" + i + " ";
+                SqlDataReader dr = obj.ExReader(uids);
+                
+                while (dr.Read())
+                {
+                    cid = Convert.ToInt32(dr["Cart_ID"].ToString());
+                    cqu = Convert.ToInt32(dr["Quantity"].ToString());
+                    cto = Convert.ToInt32(dr["Total_Price"].ToString());
+                    cst = dr["Status"].ToString();
+                    pid = Convert.ToInt32(dr["Product_Id"].ToString());
+                    uid = Convert.ToInt32(dr["User_Id"].ToString());
+                }
+                gt = gt + cto;
+
+                string ins = "insert into Order_tab values(" + cid + "," + uid + "," + cqu + "," + cto + ",'" + cst + "')";
+                int j = obj.fn_NonQuery(ins);
+
+
+
+            }
+            string bin = "insert into Bill_Tab values(" + DateTime.Now.ToString("yyyy-MM-dd") + "," + uid + "," + gt + ",'unpaid')";
+            int k = obj.fn_NonQuery(bin);
+            if (k == 1)
+            {
+                string del = "delete from Cart_Tab where User_Id=" + Session["userid"] + "";
+                int l = obj.fn_NonQuery(del);
+            }
+            Response.Redirect("View_bill.aspx");
+
+
         }
 
-        
+
     }
 }
