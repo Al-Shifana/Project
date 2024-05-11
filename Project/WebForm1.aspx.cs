@@ -29,7 +29,7 @@ namespace Project
         {
             int id = Convert.ToInt32(e.CommandArgument);
             Session["uid"] = id;
-            Response.Redirect("ViewAllProduct.aspx");
+            Response.Redirect("ViewAllProducts.aspx");
         }
 
     }

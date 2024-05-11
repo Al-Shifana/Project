@@ -14,7 +14,7 @@ namespace Project
 
         public Class1()
         {
-            con = new SqlConnection(@"server=DESKTOP-779GLH4\SQLEXPRESS;database=AspProjectDB;Integrated security=true");
+            con = new SqlConnection(@"server=DESKTOP-779GLH4\SQLEXPRESS05;database=AspProjectDB;Integrated security=true");
         }
         public int fn_NonQuery(string sqlquery)
         {

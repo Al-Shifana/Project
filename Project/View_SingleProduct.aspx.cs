@@ -4,17 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace Project
 {
-    public partial class VeiwSingleProduct : System.Web.UI.Page
+    public partial class View_SingleProduct : System.Web.UI.Page
     {
         Class1 obj = new Class1();
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
                 string sel = "select * from Product_tab where Product_Id=" + Session["uid1"] + "";
@@ -30,17 +28,7 @@ namespace Project
 
                 }
             }
- 
         }
-
-        
-
-
-        protected void Button2_Click1(object sender, EventArgs e)
-        {
-            Response.Redirect("WebForm1.aspx");
-        }
-
         protected void Button1_Click(object sender, EventArgs e)
         {
             string s = "select max(Cart_Id) from Cart_tab";
@@ -68,13 +56,13 @@ namespace Project
                 Label8.Text = "Added to Cart";
             }
         }
-
+        protected void Button2_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("WebForm1.aspx");
+        }
         protected void Button3_Click(object sender, EventArgs e)
         {
             Response.Redirect("ViewCart.aspx");
         }
     }
 }
-
-    
-

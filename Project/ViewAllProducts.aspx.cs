@@ -9,9 +9,9 @@ using System.Data.SqlClient;
 
 namespace Project
 {
-    public partial class ViewProduct : System.Web.UI.Page
+    public partial class ViewAllProducts : System.Web.UI.Page
     {
-         Class1 obj = new Class1();
+        Class1 obj = new Class1();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,19 +21,12 @@ namespace Project
                 DataList1.DataSource = ds;
                 DataList1.DataBind();
             }
-           
         }
-
-       
-
         protected void ImageButton1_Command(object sender, CommandEventArgs e)
         {
             int id1 = Convert.ToInt32(e.CommandArgument);
             Session["uid1"] = id1;
-            Response.Redirect("ViewSingleProduct.aspx");
+            Response.Redirect("View_SingleProduct.aspx");
         }
-       
-
-        
     }
 }

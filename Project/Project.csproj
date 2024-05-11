@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Project</RootNamespace>
     <AssemblyName>Project</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,22 +45,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -136,10 +136,10 @@
     <Content Include="READ-ME.txt" />
     <Content Include="shop.html" />
     <Content Include="UserReg.aspx" />
+    <Content Include="ViewAllProducts.aspx" />
     <Content Include="ViewCart.aspx" />
-    <Content Include="ViewSingleProduct.aspx" />
-    <Content Include="ViewAllProduct.aspx" />
     <Content Include="View_Bill.aspx" />
+    <Content Include="View_SingleProduct.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="AdminReg.aspx" />
@@ -203,6 +203,13 @@
     <Compile Include="UserReg.aspx.designer.cs">
       <DependentUpon>UserReg.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewAllProducts.aspx.cs">
+      <DependentUpon>ViewAllProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAllProducts.aspx.designer.cs">
+      <DependentUpon>ViewAllProducts.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewCart.aspx.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -210,26 +217,19 @@
     <Compile Include="ViewCart.aspx.designer.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewSingleProduct.aspx.cs">
-      <DependentUpon>ViewSingleProduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewSingleProduct.aspx.designer.cs">
-      <DependentUpon>ViewSingleProduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewAllProduct.aspx.cs">
-      <DependentUpon>ViewAllProduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewAllProduct.aspx.designer.cs">
-      <DependentUpon>ViewAllProduct.aspx</DependentUpon>
-    </Compile>
     <Compile Include="View_Bill.aspx.cs">
       <DependentUpon>View_Bill.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View_Bill.aspx.designer.cs">
       <DependentUpon>View_Bill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View_SingleProduct.aspx.cs">
+      <DependentUpon>View_SingleProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_SingleProduct.aspx.designer.cs">
+      <DependentUpon>View_SingleProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
