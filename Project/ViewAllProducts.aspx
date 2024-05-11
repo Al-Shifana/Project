@@ -30,7 +30,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:DataList ID="DataList1" runat="server" RepeatColumns="4" Height="870px">
+    <asp:DataList ID="DataList1" runat="server" RepeatColumns="4" Height="761px" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
         <ItemTemplate>
             <table class="auto-style1">
                 <tr>
