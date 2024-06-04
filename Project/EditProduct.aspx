@@ -120,6 +120,11 @@
                                     <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("Product_Id") %>' OnCommand="LinkButton2_Command">Block</asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Delete">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# Eval("Product_Id") %>' OnCommand="LinkButton3_Command">Select</asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                             <asp:BoundField DataField="Product_Name" HeaderText="Product Name" />
                             <asp:ImageField DataImageUrlField="Product_Image" HeaderText="Image">
                             </asp:ImageField>
@@ -227,8 +232,11 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="auto-style14">&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td class="auto-style21"></td>
+                                <td class="auto-style4">
+                                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Delete" />
+                                    <asp:Label ID="Label8" runat="server" Text="Label" Visible="False"></asp:Label>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="auto-style21"></td>

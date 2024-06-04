@@ -36,7 +36,7 @@ namespace Project
                 if (logtype == "admin")
                 {
                     
-                   Response.Redirect("AdminHomePage.aspx");
+                   Response.Redirect("Admin_Homepage.aspx");
 
                 }
                 else if(logtype == "user")

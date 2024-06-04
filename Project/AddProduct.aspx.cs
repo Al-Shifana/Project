@@ -28,6 +28,7 @@ namespace Project
                 Label7.Text = "inserted";
             }
         }
+
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminHomePage.aspx");

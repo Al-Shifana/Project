@@ -17,7 +17,6 @@ namespace Project
         {
               grid_bind();
             
-            
         }
         public void grid_bind()
         {

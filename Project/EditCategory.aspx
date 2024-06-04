@@ -177,7 +177,7 @@
                                 </tr>
                                 <tr>
                                     <td class="auto-style9"></td>
-                                    <td class="auto-style7"></td>
+                                    <td class="auto-style7">&nbsp;</td>
                                 </tr>
                             </table>
                         </asp:Panel>

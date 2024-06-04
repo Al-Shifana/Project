@@ -62,7 +62,7 @@ namespace Project
         }
         protected void Button3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ViewCart.aspx");
+            Response.Redirect("View_Cart.aspx");
         }
     }
 }

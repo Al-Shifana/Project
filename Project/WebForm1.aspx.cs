@@ -32,5 +32,15 @@ namespace Project
             Response.Redirect("ViewAllProducts.aspx");
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string s= "insert into Feedback_tab values(" + Session["userid"] + ",'" + TextBox1.Text+"','Take Action','admin review pending')";
+            int se = obj.fn_NonQuery(s);
+            if (se != 0)
+            {
+                Label5.Visible = true;
+                Label5.Text = "feedback send successfully";
+            }
+        }
     }
 }

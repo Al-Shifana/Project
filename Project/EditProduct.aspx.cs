@@ -75,5 +75,28 @@ namespace Project
                 grid_bind();
             }
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+            string str = "delete from Product_tab values  where Product_Id=" + Session["uid"] + "";
+            int i = obj.fn_NonQuery(str);
+            if (i == 1)
+            {
+                Label8.Text = "deleted";
+            }
+        }
+
+        protected void LinkButton3_Command(object sender, CommandEventArgs e)
+        {
+            int id1 = Convert.ToInt32(e.CommandArgument);
+            Session["uid"] = id1;
+            string str = "delete from Product_tab  where Product_Id=" + id1 + "";
+            int i = obj.fn_NonQuery(str);
+            if (i == 1)
+            {
+                Label8.Text = "deleted";
+            }
+        }
     }
 }
